@@ -39,4 +39,13 @@ class Client
     {
         $this->name = $name;
     }
+
+    public function listOfClients()
+    {
+        return [
+            ['id' => 1, 'name' => 'Fernando'],
+            ['id' => 2, 'name' => 'Fran'],
+            ['id' => 3, 'name' => 'AM']
+        ];
+    }
 }
