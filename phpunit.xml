@@ -1,0 +1,14 @@
+<phpunit colors="true" testdox="true">
+    <testsuites>
+      <testsuite name="My Test Suite">
+        <directory>tests/Unit</directory>
+      </testsuite>
+    </testsuites>
+
+    <coverage cacheDirectory=".phpunit.cache/code-coverage"
+              processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">app</directory>
+        </include>
+    </coverage>
+</phpunit>

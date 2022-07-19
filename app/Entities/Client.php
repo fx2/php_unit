@@ -48,4 +48,17 @@ class Client
             ['id' => 3, 'name' => 'AM']
         ];
     }
+
+    public function verificaNumero(int $id)
+    {
+        if ($id > 5) {
+            return 'maior que 5';
+        }
+
+        if ($id == 0) {
+            throw new \Exception('Somente números maiores que ZERO');
+        }
+
+        return 'menor que 5';
+    }
 }
