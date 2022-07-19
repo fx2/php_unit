@@ -15,7 +15,7 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @dataProvider verificaNumerosProvider
+     * @dataProvider Tests\providers\ClientProvider::verificaNumerosProvider()
      * @return void
      * @throws Exception
      */
@@ -29,24 +29,5 @@ class ClientTest extends TestCase
         $response = $client->verificaNumero($id);
 
         $this->assertEquals($expected, $response);
-    }
-
-    public function verificaNumerosProvider()
-    {
-        yield 'maior_que_cinco' => $this->maiorQueCinco();
-
-        yield 'menor_que_cinco' => ['menor que 5', 4, null];
-
-        yield 'igual_a_zero' => ['', 0, 'Exception'];
-
-    }
-
-    public function maiorQueCinco()
-    {
-        return [
-            'maior que 5',
-            8,
-            null
-        ];
     }
 }

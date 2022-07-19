@@ -20,6 +20,10 @@ class ComposerStaticInitb9013e9f42f086dab120173626f9fe20
         array (
             'Webmozart\\Assert\\' => 17,
         ),
+        'T' => 
+        array (
+            'Tests\\' => 6,
+        ),
         'P' => 
         array (
             'Prophecy\\' => 9,
@@ -46,6 +50,10 @@ class ComposerStaticInitb9013e9f42f086dab120173626f9fe20
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
         ),
         'Prophecy\\' => 
         array (
