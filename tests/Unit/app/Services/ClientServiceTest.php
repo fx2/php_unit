@@ -42,4 +42,11 @@ class ClientServiceTest extends TestCase
 
         $this->assertIsArray($response);
     }
+
+    public function testDisponibilidade()
+    {
+        $response = $this->clientService->disponibilidade();
+
+        $this->assertEquals(1, $response);
+    }
 }
