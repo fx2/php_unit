@@ -2,7 +2,10 @@
 
 namespace App\Repositories;
 
-class ClientRepositoryDuble
+class ClientRepositoryDuble extends ClientRepository
 {
-
+    public function disponibilidade()
+    {
+        return 1;
+    }
 }
