@@ -31,4 +31,9 @@ class ClientService
 
         return $this->clientRepository->getByName($name);
     }
+
+    public function disponibilidade()
+    {
+        return $this->clientRepository->disponibilidade();
+    }
 }

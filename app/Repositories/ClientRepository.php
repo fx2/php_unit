@@ -35,4 +35,11 @@ class ClientRepository
             return $client['name'] == $name;
         });
     }
+
+    public function disponibilidade()
+    {
+        // $resp = Http::get('disponibilidade') 0 ou 1
+
+        return rand(0, 1);
+    }
 }
