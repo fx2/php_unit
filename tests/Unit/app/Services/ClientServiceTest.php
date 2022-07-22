@@ -25,12 +25,20 @@ class ClientServiceTest extends TestCase
         $this->assertIsArray($response);
         $this->assertEquals('Batima', $response['name']);
     }
-//
-//    public function testSaveClientWithException()
-//    {
-//        $this->expectException('Exception');
-//        $this->clientService->saveClient('AM');
-//    }
+
+    public function testSaveClientWithException()
+    {
+        $this->clientRepository->method('getByName')->willReturn([
+            'id' => 1, 'name' => 'AM'
+        ]);
+
+        $this->clientRepository->method('save')->willReturn(
+            $this->throwException(new Exception())
+        );
+
+        $this->expectException('Exception');
+        $this->clientService->saveClient('AM');
+    }
 
     public function testGetClient()
     {
